@@ -1,0 +1,221 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+COMPARADOR_6bits
+# storage
+db|my_project.(1).cnf
+db|my_project.(1).cnf
+# case_insensitive
+# source_file
+COMPARADOR_6bits.bdf
+eefedee130b839fedff3591dcbac8ac0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+COMPARADOR_6bits:inst4
+COMPARADOR_6bits:inst10
+}
+# macro_sequence
+
+# end
+# entity
+CODIFICADOR
+# storage
+db|my_project.(2).cnf
+db|my_project.(2).cnf
+# case_insensitive
+# source_file
+CODIFICADOR.bdf
+c35d8fdc5329c08a94bfe4c73617cc5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CODIFICADOR:inst15
+CODIFICADOR:inst6
+}
+# macro_sequence
+
+# end
+# entity
+SOMADOR_6BITS
+# storage
+db|my_project.(3).cnf
+db|my_project.(3).cnf
+# case_insensitive
+# source_file
+SOMADOR_6BITS.bdf
+d9438ba112edcf081bd91562831958
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CODIFICADOR:inst15|SOMADOR_6BITS:inst
+CODIFICADOR:inst6|SOMADOR_6BITS:inst
+}
+# macro_sequence
+
+# end
+# entity
+Block1
+# storage
+db|my_project.(4).cnf
+db|my_project.(4).cnf
+# case_insensitive
+# source_file
+Block1.bdf
+1d5b2696636255fd2e816a98a8dec891
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst2
+CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst1
+CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst
+CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst3
+CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst4
+CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst5
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst9
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst15
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst11
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst13
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst18
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst17
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst16
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst14
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst21
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst20
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst19
+CODIFICADOR:inst15|multiplicador:inst1|Block1:inst22
+CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst2
+CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst1
+CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst
+CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst3
+CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst4
+CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst5
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst9
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst15
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst11
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst13
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst18
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst17
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst16
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst14
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst21
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst20
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst19
+CODIFICADOR:inst6|multiplicador:inst1|Block1:inst22
+}
+# macro_sequence
+
+# end
+# entity
+multiplicador
+# storage
+db|my_project.(5).cnf
+db|my_project.(5).cnf
+# case_insensitive
+# source_file
+multiplicador.bdf
+35653871f3c41b734f27345dd716d38
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CODIFICADOR:inst15|multiplicador:inst1
+CODIFICADOR:inst6|multiplicador:inst1
+}
+# macro_sequence
+
+# end
+# entity
+DECODIFICADOR_LINHAS
+# storage
+db|my_project.(6).cnf
+db|my_project.(6).cnf
+# case_insensitive
+# source_file
+DECODIFICADOR_LINHAS.bdf
+852b657e82115228278dd774ca7ae5fa
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DECODIFICADOR_LINHAS:inst9
+}
+# macro_sequence
+
+# end
+# entity
+DECODIFICADOR_COLUNAS
+# storage
+db|my_project.(7).cnf
+db|my_project.(7).cnf
+# case_insensitive
+# source_file
+DECODIFICADOR_COLUNAS.bdf
+15a3ea4e352593d6631d82ca1aa648e0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DECODIFICADOR_COLUNAS:inst3
+}
+# macro_sequence
+
+# end
+# entity
+continuar
+# storage
+db|my_project.(0).cnf
+db|my_project.(0).cnf
+# case_insensitive
+# source_file
+continuar.bdf
+da2e1aad5397cab632b98e4dd8bafb5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

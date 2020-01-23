@@ -1,0 +1,699 @@
+|continuar
+LED_VERMELHO <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+START => inst.IN0
+A => CODIFICADOR:inst15.A
+A => DECODIFICADOR_COLUNAS:inst3.A
+B => CODIFICADOR:inst15.B
+B => DECODIFICADOR_COLUNAS:inst3.B
+C => CODIFICADOR:inst15.C
+C => DECODIFICADOR_COLUNAS:inst3.C
+D => CODIFICADOR:inst15.D
+D => DECODIFICADOR_LINHAS:inst9.A
+E => CODIFICADOR:inst15.E
+E => DECODIFICADOR_LINHAS:inst9.B
+F => CODIFICADOR:inst15.F
+F => DECODIFICADOR_LINHAS:inst9.C
+LED_VERDE <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+L0 <= DECODIFICADOR_LINHAS:inst9.L0
+L1 <= DECODIFICADOR_LINHAS:inst9.L1
+L2 <= DECODIFICADOR_LINHAS:inst9.L2
+L3 <= DECODIFICADOR_LINHAS:inst9.L3
+L4 <= DECODIFICADOR_LINHAS:inst9.L4
+L5 <= DECODIFICADOR_LINHAS:inst9.L5
+L6 <= DECODIFICADOR_LINHAS:inst9.L6
+CA <= DECODIFICADOR_COLUNAS:inst3.CA
+CB <= DECODIFICADOR_COLUNAS:inst3.CB
+CC <= DECODIFICADOR_COLUNAS:inst3.CC
+CD <= DECODIFICADOR_COLUNAS:inst3.CD
+CE <= DECODIFICADOR_COLUNAS:inst3.CE
+camparador <= COMPARADOR_6bits:inst10.QB
+
+
+|continuar|COMPARADOR_6bits:inst4
+QAB <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+IAB => inst38.IN0
+A6 => inst17.IN0
+A6 => inst18.IN0
+A6 => inst44.IN5
+B6 => inst17.IN1
+B6 => inst11.IN0
+B6 => inst.IN5
+A5 => inst16.IN0
+A5 => inst43.IN1
+A5 => inst21.IN0
+B5 => inst16.IN1
+B5 => inst20.IN0
+B5 => inst36.IN1
+A3 => inst14.IN0
+A3 => inst40.IN0
+A3 => inst7.IN0
+B3 => inst14.IN1
+B3 => inst8.IN0
+B3 => inst34.IN0
+A4 => inst15.IN0
+A4 => inst10.IN0
+A4 => inst41.IN2
+B4 => inst15.IN1
+B4 => inst9.IN0
+B4 => inst35.IN2
+A1 => inst12.IN0
+A1 => inst25.IN0
+A1 => inst2.IN0
+B1 => inst12.IN1
+B1 => inst3.IN0
+B1 => inst19.IN0
+A2 => inst13.IN0
+A2 => inst37.IN0
+A2 => inst4.IN0
+B2 => inst13.IN1
+B2 => inst5.IN0
+B2 => inst33.IN0
+QB <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+IA => inst45.IN5
+QA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+IB => inst42.IN5
+
+
+|continuar|CODIFICADOR:inst15
+1 <= SOMADOR_6BITS:inst.A
+D => multiplicador:inst1.A
+E => multiplicador:inst1.B
+F => multiplicador:inst1.C
+A => SOMADOR_6BITS:inst.A4
+B => SOMADOR_6BITS:inst.A5
+C => SOMADOR_6BITS:inst.A6
+2 <= SOMADOR_6BITS:inst.B
+3 <= SOMADOR_6BITS:inst.C
+4 <= SOMADOR_6BITS:inst.E
+5 <= SOMADOR_6BITS:inst.D
+6 <= SOMADOR_6BITS:inst.F
+Cout <= SOMADOR_6BITS:inst.Cout
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst
+A <= Block1:inst2.S
+A1 => Block1:inst2.A
+A2 => Block1:inst1.A
+B2 => Block1:inst1.B
+A3 => Block1:inst.A
+B3 => Block1:inst.B
+A4 => Block1:inst3.A
+B4 => Block1:inst3.B
+A5 => Block1:inst4.A
+B5 => Block1:inst4.B
+A6 => Block1:inst5.A
+B6 => Block1:inst5.B
+Cin => Block1:inst5.Cin
+B1 => Block1:inst2.Cin
+B <= Block1:inst1.S
+C <= Block1:inst.S
+Cout <= Block1:inst2.Cout
+D <= Block1:inst3.S
+E <= Block1:inst4.S
+F <= Block1:inst5.S
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst2
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst1
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst3
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst4
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|SOMADOR_6BITS:inst|Block1:inst5
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1
+6 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+F => inst.IN0
+F => inst3.IN0
+F => inst6.IN0
+C => inst.IN1
+C => inst1.IN1
+C => inst2.IN1
+5 <= Block1:inst9.S
+E => inst1.IN0
+E => inst4.IN0
+E => inst7.IN0
+B => inst3.IN1
+B => inst4.IN1
+B => inst5.IN1
+4 <= Block1:inst15.S
+D => inst2.IN0
+D => inst5.IN0
+D => inst8.IN0
+A => inst6.IN1
+A => inst7.IN1
+A => inst8.IN1
+3 <= Block1:inst18.S
+2 <= Block1:inst21.S
+1 <= Block1:inst22.S
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst9
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst15
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst11
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst13
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst18
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst17
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst16
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst14
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst21
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst20
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst19
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst15|multiplicador:inst1|Block1:inst22
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6
+1 <= SOMADOR_6BITS:inst.A
+D => multiplicador:inst1.A
+E => multiplicador:inst1.B
+F => multiplicador:inst1.C
+A => SOMADOR_6BITS:inst.A4
+B => SOMADOR_6BITS:inst.A5
+C => SOMADOR_6BITS:inst.A6
+2 <= SOMADOR_6BITS:inst.B
+3 <= SOMADOR_6BITS:inst.C
+4 <= SOMADOR_6BITS:inst.E
+5 <= SOMADOR_6BITS:inst.D
+6 <= SOMADOR_6BITS:inst.F
+Cout <= SOMADOR_6BITS:inst.Cout
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst
+A <= Block1:inst2.S
+A1 => Block1:inst2.A
+A2 => Block1:inst1.A
+B2 => Block1:inst1.B
+A3 => Block1:inst.A
+B3 => Block1:inst.B
+A4 => Block1:inst3.A
+B4 => Block1:inst3.B
+A5 => Block1:inst4.A
+B5 => Block1:inst4.B
+A6 => Block1:inst5.A
+B6 => Block1:inst5.B
+Cin => Block1:inst5.Cin
+B1 => Block1:inst2.Cin
+B <= Block1:inst1.S
+C <= Block1:inst.S
+Cout <= Block1:inst2.Cout
+D <= Block1:inst3.S
+E <= Block1:inst4.S
+F <= Block1:inst5.S
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst2
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst1
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst3
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst4
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|SOMADOR_6BITS:inst|Block1:inst5
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1
+6 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+F => inst.IN0
+F => inst3.IN0
+F => inst6.IN0
+C => inst.IN1
+C => inst1.IN1
+C => inst2.IN1
+5 <= Block1:inst9.S
+E => inst1.IN0
+E => inst4.IN0
+E => inst7.IN0
+B => inst3.IN1
+B => inst4.IN1
+B => inst5.IN1
+4 <= Block1:inst15.S
+D => inst2.IN0
+D => inst5.IN0
+D => inst8.IN0
+A => inst6.IN1
+A => inst7.IN1
+A => inst8.IN1
+3 <= Block1:inst18.S
+2 <= Block1:inst21.S
+1 <= Block1:inst22.S
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst9
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst15
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst11
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst13
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst18
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst17
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst16
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst14
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst21
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst20
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst19
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|CODIFICADOR:inst6|multiplicador:inst1|Block1:inst22
+S <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+B => inst8.IN0
+A => inst.IN1
+A => inst8.IN1
+Cin => inst5.IN1
+Cin => inst7.IN1
+Cout <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|COMPARADOR_6bits:inst10
+QAB <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+IAB => inst38.IN0
+A6 => inst17.IN0
+A6 => inst18.IN0
+A6 => inst44.IN5
+B6 => inst17.IN1
+B6 => inst11.IN0
+B6 => inst.IN5
+A5 => inst16.IN0
+A5 => inst43.IN1
+A5 => inst21.IN0
+B5 => inst16.IN1
+B5 => inst20.IN0
+B5 => inst36.IN1
+A3 => inst14.IN0
+A3 => inst40.IN0
+A3 => inst7.IN0
+B3 => inst14.IN1
+B3 => inst8.IN0
+B3 => inst34.IN0
+A4 => inst15.IN0
+A4 => inst10.IN0
+A4 => inst41.IN2
+B4 => inst15.IN1
+B4 => inst9.IN0
+B4 => inst35.IN2
+A1 => inst12.IN0
+A1 => inst25.IN0
+A1 => inst2.IN0
+B1 => inst12.IN1
+B1 => inst3.IN0
+B1 => inst19.IN0
+A2 => inst13.IN0
+A2 => inst37.IN0
+A2 => inst4.IN0
+B2 => inst13.IN1
+B2 => inst5.IN0
+B2 => inst33.IN0
+QB <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+IA => inst45.IN5
+QA <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+IB => inst42.IN5
+
+
+|continuar|DECODIFICADOR_LINHAS:inst9
+L0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+E => inst.IN0
+E => inst1.IN0
+E => inst2.IN0
+E => inst3.IN0
+E => inst4.IN0
+E => inst5.IN0
+E => inst6.IN0
+C => inst22.IN0
+C => inst1.IN1
+C => inst3.IN1
+C => inst5.IN1
+A => inst26.IN0
+A => inst4.IN2
+A => inst5.IN2
+A => inst6.IN2
+B => inst27.IN0
+B => inst2.IN3
+B => inst3.IN3
+B => inst6.IN3
+L1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+L2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+L3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+L4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+L5 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+L6 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|continuar|DECODIFICADOR_COLUNAS:inst3
+CA <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+E => inst5.IN0
+E => inst6.IN0
+E => inst7.IN0
+E => inst8.IN0
+E => inst9.IN0
+A => inst23.IN0
+A => inst9.IN1
+B => inst24.IN0
+B => inst7.IN2
+B => inst8.IN2
+C => inst25.IN0
+C => inst6.IN3
+C => inst8.IN3
+CB <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+CC <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CD <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CE <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
