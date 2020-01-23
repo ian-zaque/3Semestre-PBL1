@@ -1,0 +1,56 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x7711eb75: ntdll + 0x3eb75 (RtlEnterCriticalSection + 0x15)
+	0x6a28e694: ig8icd32 + 0x50e694 (DrvValidateVersion + 0x1364)
+	0x6a28e155: ig8icd32 + 0x50e155 (DrvValidateVersion + 0xe25)
+	0x74fca5fd: USER32 + 0x2a5fd (GetAsyncKeyState + 0x29d)
+	0x7502b257: USER32 + 0x8b257 (Ordinal2523 + 0x427)
+	0x74fda6d8: USER32 + 0x3a6d8 (SystemParametersInfoW + 0x4a8)
+	0x7714cd3c: ntdll + 0x6cd3c (KiUserCallbackDispatcher + 0x4c)
+	0x102d8714: tk84 + 0xb8714 (_Tk_DestroyWindow + 0x394)
+	0x102d9c42: tk84 + 0xb9c42 (_Tk_GetNumMainWindows + 0x112)
+	0x102d6600: tk84 + 0xb6600 (_TkFinalize + 0x70)
+	0x1022582f: tk84 + 0x582f (_DllMain@12 + 0x5f)
+	0x102da8d6: tk84 + 0xba8d6 (_DllMainCRTStartup + 0x70)
+	0x7714a895: ntdll + 0x6a895 (RtlCheckTokenCapability + 0x7a5)
+	0x771201a5: ntdll + 0x401a5 (RtlHashUnicodeString + 0x1a5)
+	0x7711458c: ntdll + 0x3458c (LdrShutdownProcess + 0xec)
+	0x77114484: ntdll + 0x34484 (RtlExitUserProcess + 0xb4)
+	0x74c53a32: KERNEL32 + 0x13a32 (ExitProcess + 0x12)
+	0x637021cb: MSVCR90 + 0x221cb (_amsg_exit + 0x74)
+	0x63702410: MSVCR90 + 0x22410 (_get_pgmptr + 0x195)
+	0x63702465: MSVCR90 + 0x22465 (exit + 0x10)
+	0x0044f443: quartus + 0x4f443 (Pjm_Uninit + 0x40203)
+	0x74c58493: KERNEL32 + 0x18493 (BaseThreadInitThunk + 0x23)
+	0x771441c7: ntdll + 0x641c7 (RtlAreBitsSet + 0x87)
+	0x77144197: ntdll + 0x64197 (RtlAreBitsSet + 0x57)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Access Violation at 0X7711EB75</error>
+	<date>Sun May 26 22:38:13 2019</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X7711EB75
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0xffffffff8e9524a4:
+	0xfffffffffffffffe:
+	0x6e9deb18: MSVCR90 + 0x2eb18 (fputs + 0x0)
+	</callstack>
+	<error>Access Violation at 0X7711EB75</error>
+	<date>Mon May 27 06:35:05 2019</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X7711EB75
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
